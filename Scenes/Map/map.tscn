@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b7bep7sb5x5c7"]
+
+[ext_resource type="Script" uid="uid://l8fenjbywwmr" path="res://Scenes/Map/map.gd" id="1_xtf6f"]
+[ext_resource type="Script" uid="uid://cv87jdd778514" path="res://Scenes/Map/provinces.gd" id="2_jolfa"]
+[ext_resource type="Script" uid="uid://co4wek13epj3v" path="res://Scenes/Map/camera_2d.gd" id="3_03x5g"]
+
+[node name="Map" type="Node2D" unique_id=1349673669]
+script = ExtResource("1_xtf6f")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1461884179]
+position = Vector2(575, 324)
+script = ExtResource("3_03x5g")
+
+[node name="Provinces" type="Node2D" parent="." unique_id=134718682]
+position = Vector2(50, 50)
+script = ExtResource("2_jolfa")
