@@ -30,60 +30,64 @@ A comprehensive classification of emojis for the production chain simulator. Eve
 
 Plants, crops, and trees that can be harvested directly from the land without prior processing.
 
-| Emoji | Name             | Notes                            |
-|-------|------------------|----------------------------------|
-| 🌾    | Wheat            | Grain crop, base for flour       |
-| 🌽    | Corn             | Grain crop                       |
-| 🍇    | Grapes           | Base for wine                    |
-| 🍎    | Apple            | Orchard fruit                    |
-| 🍏    | Green Apple      | Orchard fruit variant            |
-| 🍊    | Orange           | Citrus fruit                     |
-| 🍋    | Lemon            | Citrus fruit                     |
-| 🍒    | Cherries         | Orchard fruit                    |
-| 🍓    | Strawberry       | Berry crop                       |
-| 🫐    | Blueberries      | Berry crop                       |
-| 🍑    | Peach            | Orchard fruit                    |
-| 🍐    | Pear             | Orchard fruit                    |
-| 🍌    | Banana           | Tropical fruit                   |
-| 🥥    | Coconut          | Tropical palm product            |
-| 🌰    | Chestnut         | Foraged nut                      |
-| 🥜    | Peanuts          | Legume crop                      |
-| 🫒    | Olive            | Base for oil                     |
-| 🌱    | Seedling         | Generic crop growth              |
-| 🍄    | Mushroom         | Foraged fungus                   |
-| 🌻    | Sunflower        | Oil seed crop                    |
-| 🌹    | Rose             | Flower crop, used in perfume     |
-| 🌺    | Hibiscus         | Flower crop, used in tea         |
-| 🪻    | Lavender         | Herb crop                        |
-| 🌶️    | Hot Pepper       | Spice crop                       |
-| 🧄    | Garlic           | Root vegetable                   |
-| 🧅    | Onion            | Root vegetable                   |
-| 🥕    | Carrot           | Root vegetable                   |
-| 🥔    | Potato           | Tuber crop                       |
-| 🍅    | Tomato           | Vine crop                        |
-| 🥬    | Leafy Green      | Vegetable crop                   |
-| 🥦    | Broccoli         | Vegetable crop                   |
-| 🫚    | Ginger           | Root spice                       |
-| 🫛    | Pea Pod          | Legume crop                      |
-| 🥒    | Cucumber         | Vine crop                        |
-| 🍆    | Eggplant         | Vine crop                        |
-| 🫑    | Bell Pepper      | Vine crop                        |
-| 🥑    | Avocado          | Tropical fruit                   |
-| 🥝    | Kiwi             | Tropical fruit                   |
-| 🥭    | Mango            | Tropical fruit                   |
-| 🍍    | Pineapple        | Tropical fruit                   |
-| 🍈    | Melon            | Vine fruit                       |
-| 🍉    | Watermelon       | Vine fruit                       |
-| 🫘    | Beans            | Legume crop                      |
-| 🌲    | Evergreen Tree   | Source of softwood lumber        |
-| 🌳    | Deciduous Tree   | Source of hardwood lumber         |
-| 🌴    | Palm Tree        | Source of palm oil, coconut      |
-| 🌵    | Cactus           | Desert flora                     |
-| 🍀    | Clover           | Forage/pasture plant             |
-| 🪴    | Potted Plant     | Cultivated plant                 |
-| 🎋    | Bamboo           | Fast-growing building material   |
-| 🍃    | Leaves           | Generic foliage / tea leaves     |
-| 🌿    | Herb             | Generic herb for cooking/medicine|
+> **Spawn Point Rules (3,200 provinces):**
+> - **Global** — Every province independently rolls the Spawn Rate % to contain this resource.
+> - **Number** — That many seed provinces are placed randomly on the map. The Spawn Rate % is the chance an adjacent province also gets the resource (cascading outward from each seed to form clusters).
+
+| Emoji | Name             | Notes                             | Spawn Rate | Spawn Points | Base Price 🪙 |
+|-------|------------------|-----------------------------------|------------|--------------|---------------|
+| 🌾    | Wheat            | Grain crop, base for flour        | 70%        | 150          | 2             |
+| 🌽    | Corn             | Grain crop                        | 65%        | 120          | 2             |
+| 🍇    | Grapes           | Base for wine                     | 30%        | 40           | 4             |
+| 🍎    | Apple            | Orchard fruit                     | 35%        | 50           | 3             |
+| 🍏    | Green Apple      | Orchard fruit variant             | 30%        | 45           | 3             |
+| 🍊    | Orange           | Citrus fruit                      | 25%        | 30           | 4             |
+| 🍋    | Lemon            | Citrus fruit                      | 25%        | 30           | 4             |
+| 🍒    | Cherries         | Orchard fruit                     | 15%        | 20           | 5             |
+| 🍓    | Strawberry       | Berry crop                        | 30%        | 35           | 4             |
+| 🫐    | Blueberries      | Berry crop                        | 15%        | 20           | 5             |
+| 🍑    | Peach            | Orchard fruit                     | 15%        | 20           | 4             |
+| 🍐    | Pear             | Orchard fruit                     | 15%        | 20           | 4             |
+| 🍌    | Banana           | Tropical fruit                    | 25%        | 25           | 4             |
+| 🥥    | Coconut          | Tropical palm product             | 15%        | 20           | 5             |
+| 🌰    | Chestnut         | Foraged nut                       | 15%        | 20           | 3             |
+| 🥜    | Peanuts          | Legume crop                       | 30%        | Global       | 2             |
+| 🫒    | Olive            | Base for oil                      | 15%        | 15           | 5             |
+| 🌱    | Seedling         | Generic crop growth               | 90%        | Global       | 1             |
+| 🍄    | Mushroom         | Foraged fungus                    | 35%        | 40           | 3             |
+| 🌻    | Sunflower        | Oil seed crop                     | 30%        | 35           | 3             |
+| 🌹    | Rose             | Flower crop, used in perfume      | 10%        | 10           | 8             |
+| 🌺    | Hibiscus         | Flower crop, used in tea          | 10%        | 10           | 8             |
+| 🪻    | Lavender         | Herb crop                         | 12%        | 12           | 7             |
+| 🌶️    | Hot Pepper       | Spice crop                        | 25%        | 25           | 4             |
+| 🧄    | Garlic           | Root vegetable                    | 55%        | Global       | 2             |
+| 🧅    | Onion            | Root vegetable                    | 55%        | Global       | 2             |
+| 🥕    | Carrot           | Root vegetable                    | 60%        | Global       | 2             |
+| 🥔    | Potato           | Tuber crop                        | 80%        | Global       | 1             |
+| 🍅    | Tomato           | Vine crop                         | 55%        | 80           | 3             |
+| 🥬    | Leafy Green      | Vegetable crop                    | 60%        | Global       | 2             |
+| 🥦    | Broccoli         | Vegetable crop                    | 30%        | 35           | 3             |
+| 🫚    | Ginger           | Root spice                        | 12%        | 12           | 6             |
+| 🫛    | Pea Pod          | Legume crop                       | 30%        | 35           | 2             |
+| 🥒    | Cucumber         | Vine crop                         | 30%        | 35           | 3             |
+| 🍆    | Eggplant         | Vine crop                         | 25%        | 30           | 3             |
+| 🫑    | Bell Pepper      | Vine crop                         | 25%        | 30           | 3             |
+| 🥑    | Avocado          | Tropical fruit                    | 10%        | 8            | 8             |
+| 🥝    | Kiwi             | Tropical fruit                    | 10%        | 8            | 8             |
+| 🥭    | Mango            | Tropical fruit                    | 12%        | 12           | 7             |
+| 🍍    | Pineapple        | Tropical fruit                    | 10%        | 10           | 7             |
+| 🍈    | Melon            | Vine fruit                        | 25%        | 30           | 3             |
+| 🍉    | Watermelon       | Vine fruit                        | 25%        | 30           | 3             |
+| 🫘    | Beans            | Legume crop                       | 55%        | Global       | 2             |
+| 🌲    | Evergreen Tree   | Source of softwood lumber         | 85%        | 200          | 3             |
+| 🌳    | Deciduous Tree   | Source of hardwood lumber         | 80%        | 250          | 3             |
+| 🌴    | Palm Tree        | Source of palm oil, coconut       | 25%        | 30           | 5             |
+| 🌵    | Cactus           | Desert flora                      | 30%        | 25           | 4             |
+| 🍀    | Clover           | Forage/pasture plant              | 60%        | Global       | 1             |
+| 🪴    | Potted Plant     | Cultivated plant                  | 10%        | Global       | 5             |
+| 🎋    | Bamboo           | Fast-growing building material    | 25%        | 25           | 4             |
+| 🍃    | Leaves           | Generic foliage / tea leaves      | 90%        | Global       | 1             |
+| 🌿    | Herb             | Generic herb for cooking/medicine | 55%        | Global       | 2             |
 
 ---
 
@@ -91,60 +95,60 @@ Plants, crops, and trees that can be harvested directly from the land without pr
 
 Living animals that produce resources (milk, eggs, wool) or are themselves a resource (meat, leather, fish).
 
-| Emoji | Name             | Products                              |
-|-------|------------------|---------------------------------------|
-| 🐄    | Cow              | Milk, beef, leather                   |
-| 🐂    | Ox               | Draft power, beef                     |
-| 🐃    | Water Buffalo    | Milk, draft power                     |
-| 🐑    | Sheep            | Wool, mutton                          |
-| 🐏    | Ram              | Wool, mutton                          |
-| 🐐    | Goat             | Milk, cheese, meat                    |
-| 🐖    | Pig              | Pork, bacon, leather                  |
-| 🐗    | Boar             | Wild game meat                        |
-| 🐔    | Chicken          | Eggs, poultry                         |
-| 🐓    | Rooster          | Poultry                               |
-| 🦃    | Turkey           | Poultry, feathers                     |
-| 🦆    | Duck             | Eggs, poultry, feathers               |
-| 🦢    | Swan             | Feathers (decorative)                 |
-| 🐇    | Rabbit           | Fur, meat                             |
-| 🦌    | Deer             | Venison, hide, antlers                |
-| 🐎    | Horse            | Transport, draft power                |
-| 🐟    | Fish             | Food, oil                             |
-| 🐠    | Tropical Fish    | Exotic food                           |
-| 🐡    | Pufferfish       | Rare delicacy                         |
-| 🦈    | Shark            | Meat, fins                            |
-| 🐙    | Octopus          | Seafood                               |
-| 🦑    | Squid            | Seafood, ink                          |
-| 🦐    | Shrimp           | Seafood                               |
-| 🦀    | Crab             | Seafood                               |
-| 🦞    | Lobster          | Seafood (luxury)                      |
-| 🐝    | Bee              | Honey, beeswax                        |
-| 🐛    | Caterpillar      | Silk (silkworm)                       |
-| 🕷️    | Spider           | Spider silk (rare)                    |
-| 🦅    | Eagle            | Feathers, hunting aid                 |
-| 🦉    | Owl              | Feathers, pest control                |
-| 🦜    | Parrot           | Exotic pet / trade good               |
-| 🐦    | Bird             | Feathers, eggs                        |
-| 🦚    | Peacock          | Decorative feathers                   |
-| 🐺    | Wolf             | Fur, wild game                        |
-| 🦊    | Fox              | Fur                                   |
-| 🐻    | Bear             | Fur, meat, fat                        |
-| 🐊    | Crocodile        | Leather (exotic)                      |
-| 🐢    | Turtle           | Shell (decorative)                    |
-| 🐍    | Snake            | Venom (medicine), skin                |
-| 🐘    | Elephant         | Ivory (historical), draft power       |
-| 🦏    | Rhinoceros       | Horn (trade good)                     |
-| 🦬    | Bison            | Meat, hide                            |
-| 🪿    | Goose            | Eggs, feathers, down                  |
-| 🫏    | Donkey           | Draft power, transport                |
-| 🦩    | Flamingo         | Decorative feathers                   |
-| 🐪    | Camel            | Milk, transport (desert)              |
-| 🐫    | Two-Hump Camel   | Wool, transport (desert)              |
-| 🦙    | Llama            | Wool, transport (mountain)            |
-| 🦫    | Beaver           | Fur, dam-building                     |
-| 🦦    | Otter            | Fur                                   |
-| 🐈    | Cat              | Pest control                          |
-| 🐕    | Dog              | Herding, guarding                     |
+| Emoji | Name             | Products                              | Spawn Rate | Spawn Points | Base Price 🪙 |
+|-------|------------------|---------------------------------------|------------|--------------|---------------|
+| 🐄    | Cow              | Milk, beef, leather                   | 60%        | Global       | 8             |
+| 🐂    | Ox               | Draft power, beef                     | 15%        | 20           | 12            |
+| 🐃    | Water Buffalo    | Milk, draft power                     | 10%        | 15           | 14            |
+| 🐑    | Sheep            | Wool, mutton                          | 55%        | Global       | 6             |
+| 🐏    | Ram              | Wool, mutton                          | 30%        | 25           | 8             |
+| 🐐    | Goat             | Milk, cheese, meat                    | 35%        | 30           | 6             |
+| 🐖    | Pig              | Pork, bacon, leather                  | 55%        | Global       | 7             |
+| 🐗    | Boar             | Wild game meat                        | 25%        | 30           | 6             |
+| 🐔    | Chicken          | Eggs, poultry                         | 80%        | Global       | 3             |
+| 🐓    | Rooster          | Poultry                               | 50%        | Global       | 3             |
+| 🦃    | Turkey           | Poultry, feathers                     | 30%        | 35           | 5             |
+| 🦆    | Duck             | Eggs, poultry, feathers               | 35%        | Global       | 4             |
+| 🦢    | Swan             | Feathers (decorative)                 | 3%         | 8            | 18            |
+| 🐇    | Rabbit           | Fur, meat                             | 55%        | Global       | 4             |
+| 🦌    | Deer             | Venison, hide, antlers                | 30%        | 40           | 8             |
+| 🐎    | Horse            | Transport, draft power                | 25%        | Global       | 15            |
+| 🐟    | Fish             | Food, oil                             | 85%        | 300          | 3             |
+| 🐠    | Tropical Fish    | Exotic food                           | 25%        | 25           | 10            |
+| 🐡    | Pufferfish       | Rare delicacy                         | 3%         | 5            | 25            |
+| 🦈    | Shark            | Meat, fins                            | 5%         | 15           | 20            |
+| 🐙    | Octopus          | Seafood                               | 12%        | 20           | 8             |
+| 🦑    | Squid            | Seafood, ink                          | 12%        | 20           | 7             |
+| 🦐    | Shrimp           | Seafood                               | 50%        | 80           | 5             |
+| 🦀    | Crab             | Seafood                               | 30%        | 50           | 8             |
+| 🦞    | Lobster          | Seafood (luxury)                      | 10%        | 15           | 18            |
+| 🐝    | Bee              | Honey, beeswax                        | 35%        | Global       | 5             |
+| 🐛    | Caterpillar      | Silk (silkworm)                       | 10%        | 12           | 12            |
+| 🕷️    | Spider           | Spider silk (rare)                    | 5%         | Global       | 10            |
+| 🦅    | Eagle            | Feathers, hunting aid                 | 5%         | 10           | 20            |
+| 🦉    | Owl              | Feathers, pest control                | 12%        | 20           | 8             |
+| 🦜    | Parrot           | Exotic pet / trade good               | 10%        | 12           | 18            |
+| 🐦    | Bird             | Feathers, eggs                        | 80%        | Global       | 2             |
+| 🦚    | Peacock          | Decorative feathers                   | 3%         | 5            | 25            |
+| 🐺    | Wolf             | Fur, wild game                        | 12%        | 20           | 10            |
+| 🦊    | Fox              | Fur                                   | 10%        | 15           | 12            |
+| 🐻    | Bear             | Fur, meat, fat                        | 5%         | 10           | 18            |
+| 🐊    | Crocodile        | Leather (exotic)                      | 5%         | 8            | 20            |
+| 🐢    | Turtle           | Shell (decorative)                    | 10%        | 15           | 8             |
+| 🐍    | Snake            | Venom (medicine), skin                | 12%        | 15           | 10            |
+| 🐘    | Elephant         | Ivory (historical), draft power       | 3%         | 5            | 40            |
+| 🦏    | Rhinoceros       | Horn (trade good)                     | 2%         | 3            | 50            |
+| 🦬    | Bison            | Meat, hide                            | 15%        | 20           | 10            |
+| 🪿    | Goose            | Eggs, feathers, down                  | 30%        | 35           | 4             |
+| 🫏    | Donkey           | Draft power, transport                | 25%        | Global       | 8             |
+| 🦩    | Flamingo         | Decorative feathers                   | 3%         | 5            | 22            |
+| 🐪    | Camel            | Milk, transport (desert)              | 12%        | 15           | 15            |
+| 🐫    | Two-Hump Camel   | Wool, transport (desert)              | 10%        | 12           | 16            |
+| 🦙    | Llama            | Wool, transport (mountain)            | 10%        | 12           | 12            |
+| 🦫    | Beaver           | Fur, dam-building                     | 12%        | 15           | 8             |
+| 🦦    | Otter            | Fur                                   | 5%         | 10           | 12            |
+| 🐈    | Cat              | Pest control                          | 30%        | Global       | 5             |
+| 🐕    | Dog              | Herding, guarding                     | 35%        | Global       | 5             |
 
 ---
 
@@ -152,27 +156,28 @@ Living animals that produce resources (milk, eggs, wool) or are themselves a res
 
 Non-living natural resources extracted from the earth or environment.
 
-| Emoji | Name             | Notes                                 |
-|-------|------------------|---------------------------------------|
-| 💎    | Gem / Diamond    | Precious gemstone                     |
-| 🪨    | Rock / Stone     | Base building & crafting material     |
-| 🧊    | Ice              | Cold-climate resource, water source   |
-| 💧    | Water            | Essential resource for all production |
-| 🛢️    | Oil Barrel       | Petroleum / crude oil                 |
-| 🧂    | Salt             | Mineral for food preservation         |
-| 🪸    | Coral            | Marine mineral resource               |
-| �ite   |                  | (Use 🪨 variants for ore types)      |
-| ite    |                  |                                       |
+| Emoji | Name             | Notes                                 | Spawn Rate | Spawn Points | Base Price 🪙 |
+|-------|------------------|---------------------------------------|------------|--------------|---------------|
+| 💎    | Gem / Diamond    | Precious gemstone                     | 2%         | 5            | 100           |
+| 🪨    | Rock / Stone     | Base building & crafting material     | 95%        | Global       | 1             |
+| 🧊    | Ice              | Cold-climate resource, water source   | 50%        | 100          | 2             |
+| 💧    | Water            | Essential resource for all production | 90%        | Global       | 1             |
+| 🛢️    | Oil Barrel       | Petroleum / crude oil                 | 8%         | 10           | 15            |
+| 🧂    | Salt             | Mineral for food preservation         | 30%        | 40           | 4             |
+| 🪸    | Coral            | Marine mineral resource               | 10%        | 15           | 8             |
 
 > **Note:** Godot emoji rendering can represent different ore types (iron, copper, gold, coal) by tinting or labeling the 🪨 rock emoji. Consider using colored circles as ore indicators:
-> - 🟤 Iron Ore
-> - 🟠 Copper Ore
-> - 🟡 Gold Ore
-> - ⚫ Coal
-> - ⬜ Limestone
-> - 🔵 Sapphire
-> - 🔴 Ruby
-> - 🟢 Emerald
+>
+> | Emoji | Ore Type   | Spawn Rate | Spawn Points | Base Price 🪙 |
+> |-------|------------|------------|--------------|---------------|
+> | 🟤    | Iron Ore   | 45%        | 60           | 8             |
+> | 🟠    | Copper Ore | 30%        | 40           | 10            |
+> | 🟡    | Gold Ore   | 3%         | 5            | 50            |
+> | ⚫    | Coal       | 50%        | Global       | 5             |
+> | ⬜    | Limestone  | 35%        | Global       | 3             |
+> | 🔵    | Sapphire   | 2%         | 4            | 80            |
+> | 🔴    | Ruby       | 2%         | 4            | 80            |
+> | 🟢    | Emerald    | 1%         | 3            | 90            |
 
 ---
 
@@ -180,25 +185,25 @@ Non-living natural resources extracted from the earth or environment.
 
 First-stage processed goods. These are created from raw resources and serve as inputs for finished goods.
 
-| Emoji | Name             | Made From                     | Used In                            |
-|-------|------------------|-------------------------------|------------------------------------|
-| 🪵    | Lumber / Planks  | 🌲🌳 Trees                   | Buildings, furniture, tools        |
-| 🧵    | Thread           | 🐛 Silkworm / 🌿 Flax       | Cloth, clothing, sails             |
-| 🧶    | Yarn / Wool      | 🐑 Sheep                     | Clothing, blankets                 |
-| 🪶    | Feather          | 🦆🐔🦃 Poultry/Birds        | Arrows, quills, pillows            |
-| 🥚    | Egg              | 🐔 Chicken / 🦆 Duck         | Baking, food                       |
-| 🥛    | Milk             | 🐄 Cow / 🐐 Goat             | Cheese, butter, cream              |
-| 🧈    | Butter           | 🥛 Milk                      | Baking, cooking                    |
-| 🍯    | Honey            | 🐝 Bee                       | Mead, sweets, medicine             |
-| 🧱    | Brick            | 🪨 Clay + 🔥 Fire            | Buildings, walls                   |
-| 📜    | Parchment        | 🐑 Sheepskin / 🪵 Wood pulp  | Books, scrolls, maps               |
-| 🪣    | Bucket           | 🪵 Wood / 🪨 Metal           | Water transport, milking           |
-| 🪡    | Needle           | 🪨 Metal ore                 | Sewing, tailoring                  |
-| 🫗    | Liquid (generic) | Various                       | Potions, oils, spirits             |
-| 🏮    | Paper Lantern    | 📜 Paper + 🕯️ Candle        | Lighting, decoration               |
-| ⚱️    | Clay Pot         | 🪨 Clay + 🔥 Fire            | Storage, cooking vessels           |
-| 🪢    | Rope             | 🌿 Hemp / 🧵 Thread          | Rigging, construction, binding     |
-| 🫙    | Jar              | 🪨 Clay / Glass              | Preservation, storage              |
+| Emoji | Name             | Made From                     | Used In                            | Base Price 🪙 |
+|-------|------------------|-------------------------------|------------------------------------|---------------|
+| 🪵    | Lumber / Planks  | 🌲🌳 Trees                   | Buildings, furniture, tools        | 5             |
+| 🧵    | Thread           | 🐛 Silkworm / 🌿 Flax       | Cloth, clothing, sails             | 6             |
+| 🧶    | Yarn / Wool      | 🐑 Sheep                     | Clothing, blankets                 | 5             |
+| 🪶    | Feather          | 🦆🐔🦃 Poultry/Birds        | Arrows, quills, pillows            | 3             |
+| 🥚    | Egg              | 🐔 Chicken / 🦆 Duck         | Baking, food                       | 2             |
+| 🥛    | Milk             | 🐄 Cow / 🐐 Goat             | Cheese, butter, cream              | 3             |
+| 🧈    | Butter           | 🥛 Milk                      | Baking, cooking                    | 5             |
+| 🍯    | Honey            | 🐝 Bee                       | Mead, sweets, medicine             | 6             |
+| 🧱    | Brick            | 🪨 Clay + 🔥 Fire            | Buildings, walls                   | 4             |
+| 📜    | Parchment        | 🐑 Sheepskin / 🪵 Wood pulp  | Books, scrolls, maps               | 8             |
+| 🪣    | Bucket           | 🪵 Wood / 🪨 Metal           | Water transport, milking           | 4             |
+| 🪡    | Needle           | 🪨 Metal ore                 | Sewing, tailoring                  | 5             |
+| 🫗    | Liquid (generic) | Various                       | Potions, oils, spirits             | 3             |
+| 🏮    | Paper Lantern    | 📜 Paper + 🕯️ Candle        | Lighting, decoration               | 7             |
+| ♱️    | Clay Pot         | 🪨 Clay + 🔥 Fire            | Storage, cooking vessels           | 4             |
+| 🪢    | Rope             | 🌿 Hemp / 🧵 Thread          | Rigging, construction, binding     | 4             |
+| 🫙    | Jar              | 🪨 Clay / Glass              | Preservation, storage              | 4             |
 
 ---
 
@@ -208,95 +213,95 @@ Consumable products created by combining raw and intermediate resources. Restore
 
 ### 🥖 Baked Goods
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🍞    | Bread            | 🌾 Wheat → Flour + 💧 Water         |
-| 🥖    | Baguette         | 🌾 Flour + 💧 Water                 |
-| 🥐    | Croissant        | 🌾 Flour + 🧈 Butter                |
-| 🫓    | Flatbread        | 🌾 Flour + 💧 Water                 |
-| 🥞    | Pancakes         | 🌾 Flour + 🥚 Egg + 🥛 Milk        |
-| 🧇    | Waffle           | 🌾 Flour + 🥚 Egg + 🥛 Milk        |
-| 🍩    | Donut            | 🌾 Flour + 🍯 Honey + 🛢️ Oil       |
-| 🍪    | Cookie           | 🌾 Flour + 🧈 Butter + 🍯 Honey    |
-| 🥧    | Pie              | 🌾 Flour + 🍎 Fruit + 🧈 Butter    |
-| 🎂    | Cake             | 🌾 Flour + 🥚 Egg + 🥛 Milk + 🍯   |
-| 🍰    | Cake Slice       | (portion of 🎂)                      |
-| 🧁    | Cupcake          | 🌾 Flour + 🥚 Egg + 🍯 Honey       |
-| 🥮    | Mooncake         | 🌾 Flour + 🥚 Egg + 🫘 Bean paste  |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🍞    | Bread            | 🌾 Wheat → Flour + 💧 Water         | 5             |
+| 🥖    | Baguette         | 🌾 Flour + 💧 Water                 | 5             |
+| 🥐    | Croissant        | 🌾 Flour + 🧈 Butter                | 8             |
+| 🫓    | Flatbread        | 🌾 Flour + 💧 Water                 | 4             |
+| 🥞    | Pancakes         | 🌾 Flour + 🥚 Egg + 🥛 Milk        | 7             |
+| 🧇    | Waffle           | 🌾 Flour + 🥚 Egg + 🥛 Milk        | 7             |
+| 🍩    | Donut            | 🌾 Flour + 🍯 Honey + 🛢️ Oil       | 8             |
+| 🍪    | Cookie           | 🌾 Flour + 🧈 Butter + 🍯 Honey    | 6             |
+| 🥧    | Pie              | 🌾 Flour + 🍎 Fruit + 🧈 Butter    | 12            |
+| 🎂    | Cake             | 🌾 Flour + 🥚 Egg + 🥛 Milk + 🍯   | 15            |
+| 🍰    | Cake Slice       | (portion of 🎂)                      | 8             |
+| 🧁    | Cupcake          | 🌾 Flour + 🥚 Egg + 🍯 Honey       | 10            |
+| 🥮    | Mooncake         | 🌾 Flour + 🥚 Egg + 🫘 Bean paste  | 12            |
 
 ### 🥩 Meat & Protein
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🥩    | Steak            | 🐄 Cow                               |
-| 🥓    | Bacon            | 🐖 Pig + 🧂 Salt                    |
-| 🍖    | Meat on Bone     | 🐄🐖🐑 Livestock                    |
-| 🍗    | Poultry Leg      | 🐔🦃 Poultry                        |
-| 🌭    | Hot Dog          | 🐖 Pork + 🍞 Bread                  |
-| 🍔    | Hamburger        | 🐄 Beef + 🍞 Bread + 🥬 Lettuce    |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🥩    | Steak            | 🐄 Cow                               | 12            |
+| 🥓    | Bacon            | 🐖 Pig + 🧂 Salt                    | 10            |
+| 🍖    | Meat on Bone     | 🐄🐖🐑 Livestock                    | 8             |
+| 🍗    | Poultry Leg      | 🐔🦃 Poultry                        | 6             |
+| 🌭    | Hot Dog          | 🐖 Pork + 🍞 Bread                  | 7             |
+| 🍔    | Hamburger        | 🐄 Beef + 🍞 Bread + 🥬 Lettuce    | 10            |
 
 ### 🍲 Prepared Meals
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🍕    | Pizza            | 🍞 Dough + 🧀 Cheese + 🍅 Tomato   |
-| 🌮    | Taco             | 🌽 Corn + 🥩 Meat + 🥬 Lettuce     |
-| 🌯    | Burrito          | 🌾 Flour + 🥩 Meat + 🫘 Beans      |
-| 🥙    | Pita             | 🫓 Flatbread + 🥩 Meat + 🥬 Veg    |
-| 🧆    | Falafel          | 🫘 Beans + 🌶️ Spices               |
-| 🥘    | Stew             | 🥩 Meat + 🥔 Potato + 🥕 Carrot    |
-| 🍲    | Pot of Food      | Mixed ingredients                    |
-| 🫕    | Fondue           | 🧀 Cheese + 🍷 Wine                 |
-| 🥗    | Salad            | 🥬 Greens + 🍅 Tomato + 🥒 Cucumber|
-| 🍝    | Spaghetti        | 🌾 Flour + 🍅 Tomato sauce          |
-| 🍜    | Noodle Soup      | 🌾 Flour + 💧 Broth                 |
-| 🍛    | Curry            | 🥩 Meat + 🌶️ Spices + 🍚 Rice     |
-| 🍣    | Sushi            | 🍚 Rice + 🐟 Fish + 🌿 Seaweed     |
-| 🍱    | Bento Box        | 🍚 Rice + 🐟 Fish + 🥬 Veg         |
-| 🥟    | Dumpling         | 🌾 Flour + 🥩 Meat                  |
-| 🍤    | Fried Shrimp     | 🦐 Shrimp + 🌾 Flour + 🛢️ Oil     |
-| 🍙    | Rice Ball        | 🍚 Rice + 🌿 Seaweed               |
-| 🍚    | Cooked Rice      | 🌾 Raw rice + 💧 Water              |
-| 🍘    | Rice Cracker     | 🍚 Rice + 🧂 Salt                   |
-| 🍢    | Oden / Skewer    | 🐟 Fish + 🥔 Vegetables             |
-| 🍡    | Dango            | 🍚 Rice flour + 🍯 Honey            |
-| 🥪    | Sandwich         | 🍞 Bread + 🥩 Meat + 🧀 Cheese     |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🍕    | Pizza            | 🍞 Dough + 🧀 Cheese + 🍅 Tomato   | 12            |
+| 🌮    | Taco             | 🌽 Corn + 🥩 Meat + 🥬 Lettuce     | 10            |
+| 🌯    | Burrito          | 🌾 Flour + 🥩 Meat + 🫘 Beans      | 10            |
+| 🥙    | Pita             | 🫓 Flatbread + 🥩 Meat + 🥬 Veg    | 10            |
+| 🧆    | Falafel          | 🫘 Beans + 🌶️ Spices               | 8             |
+| 🥘    | Stew             | 🥩 Meat + 🥔 Potato + 🥕 Carrot    | 10            |
+| 🍲    | Pot of Food      | Mixed ingredients                    | 8             |
+| 🫕    | Fondue           | 🧀 Cheese + 🍷 Wine                 | 18            |
+| 🥗    | Salad            | 🥬 Greens + 🍅 Tomato + 🥒 Cucumber| 6             |
+| 🍝    | Spaghetti        | 🌾 Flour + 🍅 Tomato sauce          | 10            |
+| 🍜    | Noodle Soup      | 🌾 Flour + 💧 Broth                 | 8             |
+| 🍛    | Curry            | 🥩 Meat + 🌶️ Spices + 🍚 Rice     | 12            |
+| 🍣    | Sushi            | 🍚 Rice + 🐟 Fish + 🌿 Seaweed     | 18            |
+| 🍱    | Bento Box        | 🍚 Rice + 🐟 Fish + 🥬 Veg         | 15            |
+| 🥟    | Dumpling         | 🌾 Flour + 🥩 Meat                  | 8             |
+| 🍤    | Fried Shrimp     | 🦐 Shrimp + 🌾 Flour + 🛢️ Oil     | 12            |
+| 🍙    | Rice Ball        | 🍚 Rice + 🌿 Seaweed               | 5             |
+| 🍚    | Cooked Rice      | 🌾 Raw rice + 💧 Water              | 4             |
+| 🍘    | Rice Cracker     | 🍚 Rice + 🧂 Salt                   | 5             |
+| 🍢    | Oden / Skewer    | 🐟 Fish + 🥔 Vegetables             | 8             |
+| 🍡    | Dango            | 🍚 Rice flour + 🍯 Honey            | 6             |
+| 🥪    | Sandwich         | 🍞 Bread + 🥩 Meat + 🧀 Cheese     | 8             |
 
 ### 🍬 Sweets & Confections
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🍧    | Shaved Ice       | 🧊 Ice + 🍓 Fruit syrup             |
-| 🍨    | Ice Cream        | 🥛 Milk + 🍯 Sugar + 🍓 Fruit      |
-| 🍫    | Chocolate        | 🫘 Cacao beans + 🥛 Milk            |
-| 🍬    | Candy            | 🍯 Honey / Sugar                    |
-| 🍭    | Lollipop         | 🍯 Sugar                            |
-| 🍮    | Custard / Flan   | 🥚 Egg + 🥛 Milk + 🍯 Sugar        |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🍧    | Shaved Ice       | 🧊 Ice + 🍓 Fruit syrup             | 5             |
+| 🍨    | Ice Cream        | 🥛 Milk + 🍯 Sugar + 🍓 Fruit      | 8             |
+| 🍫    | Chocolate        | 🫘 Cacao beans + 🥛 Milk            | 12            |
+| 🍬    | Candy            | 🍯 Honey / Sugar                    | 6             |
+| 🍭    | Lollipop         | 🍯 Sugar                            | 5             |
+| 🍮    | Custard / Flan   | 🥚 Egg + 🥛 Milk + 🍯 Sugar        | 10            |
 
 ### 🧀 Dairy Products
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🧀    | Cheese           | 🥛 Milk + 🧂 Salt + Time            |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🧀    | Cheese           | 🥛 Milk + 🧂 Salt + Time            | 10            |
 
 ### 🍺 Drinks & Beverages
 
-| Emoji | Name             | Ingredients                          |
-|-------|------------------|--------------------------------------|
-| 🍺    | Beer             | 🌾 Wheat/Barley + 💧 Water + Yeast  |
-| 🍻    | Beer Mugs        | (variant of 🍺)                      |
-| 🍷    | Wine             | 🍇 Grapes + Time                    |
-| 🍸    | Cocktail         | 🫗 Spirits + 🍊 Fruit               |
-| 🍹    | Tropical Drink   | 🫗 Spirits + 🍍 Tropical fruit      |
-| 🥃    | Whiskey          | 🌾 Grain + 💧 Water + 🪵 Oak barrel |
-| 🍶    | Sake             | 🍚 Rice + 💧 Water                  |
-| ☕    | Coffee           | 🫘 Coffee beans + 💧 Water          |
-| 🍵    | Tea              | 🍃 Tea leaves + 💧 Water            |
-| 🧃    | Juice Box        | 🍎 Fruit + 💧 Water                 |
-| 🥤    | Soft Drink       | 💧 Water + 🍯 Sugar                 |
-| 🧋    | Bubble Tea       | 🍵 Tea + 🥛 Milk + 🍯 Sugar        |
-| 🥂    | Champagne        | 🍇 Grapes (sparkling)               |
-| 🫖    | Teapot           | (vessel for 🍵)                      |
+| Emoji | Name             | Ingredients                          | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🍺    | Beer             | 🌾 Wheat/Barley + 💧 Water + Yeast  | 6             |
+| 🍻    | Beer Mugs        | (variant of 🍺)                      | 6             |
+| 🍷    | Wine             | 🍇 Grapes + Time                    | 15            |
+| 🍸    | Cocktail         | 🫗 Spirits + 🍊 Fruit               | 18            |
+| 🍹    | Tropical Drink   | 🫗 Spirits + 🍍 Tropical fruit      | 18            |
+| 🥃    | Whiskey          | 🌾 Grain + 💧 Water + 🪵 Oak barrel | 22            |
+| 🍶    | Sake             | 🍚 Rice + 💧 Water                  | 15            |
+| ☕    | Coffee           | 🫘 Coffee beans + 💧 Water          | 8             |
+| 🍵    | Tea              | 🍃 Tea leaves + 💧 Water            | 6             |
+| 🧃    | Juice Box        | 🍎 Fruit + 💧 Water                 | 5             |
+| 🥤    | Soft Drink       | 💧 Water + 🍯 Sugar                 | 4             |
+| 🧋    | Bubble Tea       | 🍵 Tea + 🥛 Milk + 🍯 Sugar        | 10            |
+| 🥂    | Champagne        | 🍇 Grapes (sparkling)               | 25            |
+| 🫖    | Teapot           | (vessel for 🍵)                      | 12            |
 
 ---
 
@@ -304,38 +309,38 @@ Consumable products created by combining raw and intermediate resources. Restore
 
 Wearable items crafted from thread, yarn, leather, and other intermediate materials.
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 👕    | T-Shirt          | 🧵 Thread / Cloth                   |
-| 👔    | Necktie / Shirt  | 🧵 Thread / Silk                    |
-| 👗    | Dress            | 🧵 Thread / Cloth                   |
-| 👖    | Jeans / Pants    | 🧵 Thread / Cloth                   |
-| 🧥    | Coat             | 🧶 Wool / 🧵 Cloth + 🪶 Down       |
-| 👒    | Sun Hat          | 🧵 Straw / Cloth                    |
-| 🧣    | Scarf            | 🧶 Yarn / Wool                      |
-| 🧤    | Gloves           | 🧶 Yarn / Leather                   |
-| 🧦    | Socks            | 🧶 Yarn                             |
-| 👞    | Dress Shoe       | Leather (from 🐄)                   |
-| 👟    | Sneaker          | 🧵 Cloth + Rubber                   |
-| 👠    | High Heel        | Leather + 💎 Gem                    |
-| 👡    | Sandal           | Leather                              |
-| 👢    | Boot             | Leather + 🧵 Thread                 |
-| 👑    | Crown            | 🟡 Gold + 💎 Gems                   |
-| 💍    | Ring             | 🟡 Gold / Silver + 💎 Gem           |
-| 👛    | Purse            | Leather / 🧵 Cloth                  |
-| 👜    | Handbag          | Leather                              |
-| 🎒    | Backpack         | 🧵 Cloth + 🧵 Thread                |
-| 💼    | Briefcase        | Leather + 🪨 Metal clasp            |
-| 🧳    | Suitcase         | Leather / 🧵 Cloth + 🪨 Metal      |
-| 🥻    | Sari             | 🧵 Silk / Cloth                     |
-| 🩱    | Swimsuit         | 🧵 Cloth                            |
-| 🩲    | Undergarments    | 🧵 Cloth                            |
-| 🩳    | Shorts           | 🧵 Cloth                            |
-| 🩴    | Flip Flops       | Rubber                               |
-| 🎩    | Top Hat          | 🧵 Felt / 🧶 Wool                  |
-| 🎓    | Graduation Cap   | 🧵 Cloth + 📜 Parchment             |
-| ⛑️    | Rescue Helmet    | 🪨 Metal + Leather                  |
-| 🪖    | Military Helmet  | 🪨 Metal + Leather                  |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 👕    | T-Shirt          | 🧵 Thread / Cloth                   | 10            |
+| 👔    | Necktie / Shirt  | 🧵 Thread / Silk                    | 12            |
+| 👗    | Dress            | 🧵 Thread / Cloth                   | 20            |
+| 👖    | Jeans / Pants    | 🧵 Thread / Cloth                   | 15            |
+| 🧥    | Coat             | 🧶 Wool / 🧵 Cloth + 🪶 Down       | 25            |
+| 👒    | Sun Hat          | 🧵 Straw / Cloth                    | 8             |
+| 🧣    | Scarf            | 🧶 Yarn / Wool                      | 10            |
+| 🧤    | Gloves           | 🧶 Yarn / Leather                   | 10            |
+| 🧦    | Socks            | 🧶 Yarn                             | 6             |
+| 👞    | Dress Shoe       | Leather (from 🐄)                   | 18            |
+| 👟    | Sneaker          | 🧵 Cloth + Rubber                   | 15            |
+| 👠    | High Heel        | Leather + 💎 Gem                    | 35            |
+| 👡    | Sandal           | Leather                              | 10            |
+| 👢    | Boot             | Leather + 🧵 Thread                 | 20            |
+| 👑    | Crown            | 🟡 Gold + 💎 Gems                   | 80            |
+| 💍    | Ring             | 🟡 Gold / Silver + 💎 Gem           | 60            |
+| 👛    | Purse            | Leather / 🧵 Cloth                  | 15            |
+| 👜    | Handbag          | Leather                              | 20            |
+| 🎒    | Backpack         | 🧵 Cloth + 🧵 Thread                | 15            |
+| 💼    | Briefcase        | Leather + 🪨 Metal clasp            | 25            |
+| 🧳    | Suitcase         | Leather / 🧵 Cloth + 🪨 Metal      | 30            |
+| 🥻    | Sari             | 🧵 Silk / Cloth                     | 18            |
+| 🩱    | Swimsuit         | 🧵 Cloth                            | 12            |
+| 🩲    | Undergarments    | 🧵 Cloth                            | 6             |
+| 🩳    | Shorts           | 🧵 Cloth                            | 8             |
+| 🩴    | Flip Flops       | Rubber                               | 5             |
+| 🎩    | Top Hat          | 🧵 Felt / 🧶 Wool                  | 20            |
+| 🎓    | Graduation Cap   | 🧵 Cloth + 📜 Parchment             | 15            |
+| ⛑️    | Rescue Helmet    | 🪨 Metal + Leather                  | 25            |
+| 🪖    | Military Helmet  | 🪨 Metal + Leather                  | 30            |
 
 ---
 
@@ -345,71 +350,71 @@ Non-consumable, non-wearable manufactured items. Includes art, books, furniture,
 
 ### 📚 Knowledge & Writing
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 📖    | Open Book        | 📜 Parchment + 🧵 Thread binding    |
-| 📚    | Books            | 📜 Parchment + Leather cover         |
-| 🗺️    | Map              | 📜 Parchment + Ink                  |
-| 📃    | Document         | 📜 Parchment                        |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 📖    | Open Book        | 📜 Parchment + 🧵 Thread binding    | 15            |
+| 📚    | Books            | 📜 Parchment + Leather cover         | 20            |
+| 🗺️    | Map              | 📜 Parchment + Ink                  | 18            |
+| 📃    | Document         | 📜 Parchment                        | 8             |
 
 ### 🎸 Music & Art
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 🎸    | Guitar           | 🪵 Wood + 🧵 String                 |
-| 🎺    | Trumpet          | 🪨 Metal (brass)                    |
-| 🥁    | Drum             | 🪵 Wood + Leather                   |
-| 🎻    | Violin           | 🪵 Wood + 🧵 String + 🪶 Horsehair |
-| 🎹    | Piano / Keys     | 🪵 Wood + 🪨 Metal + Ivory          |
-| 🎨    | Artist Palette   | 🪵 Wood + Pigments                  |
-| 🖼️    | Framed Picture   | 🪵 Wood frame + Canvas              |
-| 🎭    | Theater Masks    | 🪵 Wood / 📜 Papier-mâché          |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🎸    | Guitar           | 🪵 Wood + 🧵 String                 | 25            |
+| 🎺    | Trumpet          | 🪨 Metal (brass)                    | 30            |
+| 🥁    | Drum             | 🪵 Wood + Leather                   | 18            |
+| 🎻    | Violin           | 🪵 Wood + 🧵 String + 🪶 Horsehair | 40            |
+| 🎹    | Piano / Keys     | 🪵 Wood + 🪨 Metal + Ivory          | 60            |
+| 🎨    | Artist Palette   | 🪵 Wood + Pigments                  | 12            |
+| 🖼️    | Framed Picture   | 🪵 Wood frame + Canvas              | 20            |
+| 🎭    | Theater Masks    | 🪵 Wood / 📜 Papier-mâché          | 15            |
 
 ### 🏺 Decorative & Household
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 🏺    | Amphora          | 🪨 Clay + 🔥 Fire                   |
-| 🪔    | Oil Lamp         | 🪨 Clay / Metal + 🛢️ Oil           |
-| 🕰️    | Mantle Clock     | 🪵 Wood + ⚙️ Gears + 🪨 Metal      |
-| 🪞    | Mirror           | 🪨 Glass + Metal                    |
-| 🪆    | Nesting Dolls    | 🪵 Wood + Paint                     |
-| 🧸    | Teddy Bear       | 🧵 Cloth + 🧶 Stuffing              |
-| 🪑    | Chair            | 🪵 Wood                             |
-| 🛏️    | Bed              | 🪵 Wood + 🧵 Cloth + 🪶 Down       |
-| 🕯️    | Candle           | 🐝 Beeswax + 🧵 Wick               |
-| 💡    | Light Bulb       | 🪨 Glass + Metal + Wire             |
-| 🔑    | Key              | 🪨 Metal                            |
-| 🪙    | Coin             | 🟡 Gold / Silver / Copper           |
-| 📦    | Box / Crate      | 🪵 Wood                             |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🏺    | Amphora          | 🪨 Clay + 🔥 Fire                   | 10            |
+| 🪔    | Oil Lamp         | 🪨 Clay / Metal + 🛢️ Oil           | 8             |
+| 🕰️    | Mantle Clock     | 🪵 Wood + ⚙️ Gears + 🪨 Metal      | 35            |
+| 🪞    | Mirror           | 🪨 Glass + Metal                    | 20            |
+| 🪆    | Nesting Dolls    | 🪵 Wood + Paint                     | 15            |
+| 🧸    | Teddy Bear       | 🧵 Cloth + 🧶 Stuffing              | 12            |
+| 🪑    | Chair            | 🪵 Wood                             | 10            |
+| 🛏️    | Bed              | 🪵 Wood + 🧵 Cloth + 🪶 Down       | 25            |
+| 🕯️    | Candle           | 🐝 Beeswax + 🧵 Wick               | 4             |
+| 💡    | Light Bulb       | 🪨 Glass + Metal + Wire             | 8             |
+| 🔑    | Key              | 🪨 Metal                            | 5             |
+| 🪙    | Coin             | 🟡 Gold / Silver / Copper           | 1             |
+| 📦    | Box / Crate      | 🪵 Wood                             | 4             |
 
 ### 🔬 Science & Navigation
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 🧭    | Compass          | 🪨 Metal + 💎 Lodestone             |
-| ⏳    | Hourglass        | 🪨 Glass + 🧂 Sand                  |
-| ⌚    | Watch            | 🪨 Metal + ⚙️ Gears                 |
-| ⏰    | Alarm Clock      | 🪨 Metal + ⚙️ Gears + 🔔 Bell      |
-| 🔔    | Bell             | 🪨 Metal (bronze)                   |
-| 🔬    | Microscope       | 🪨 Metal + 🪨 Glass lenses          |
-| 🔭    | Telescope        | 🪨 Metal + 🪨 Glass lenses          |
-| ⚗️    | Alembic          | 🪨 Glass                            |
-| 🧪    | Test Tube        | 🪨 Glass                            |
-| 🧫    | Petri Dish       | 🪨 Glass                            |
-| 🧲    | Magnet           | 🪨 Iron ore                         |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🧭    | Compass          | 🪨 Metal + 💎 Lodestone             | 20            |
+| ⏳    | Hourglass        | 🪨 Glass + 🧂 Sand                  | 15            |
+| ⌚    | Watch            | 🪨 Metal + ⚙️ Gears                 | 30            |
+| ⏰    | Alarm Clock      | 🪨 Metal + ⚙️ Gears + 🔔 Bell      | 25            |
+| 🔔    | Bell             | 🪨 Metal (bronze)                   | 10            |
+| 🔬    | Microscope       | 🪨 Metal + 🪨 Glass lenses          | 40            |
+| 🔭    | Telescope        | 🪨 Metal + 🪨 Glass lenses          | 45            |
+| ⚗️    | Alembic          | 🪨 Glass                            | 20            |
+| 🧪    | Test Tube        | 🪨 Glass                            | 10            |
+| 🧫    | Petri Dish       | 🪨 Glass                            | 8             |
+| 🧬    | Magnet           | 🪨 Iron ore                         | 12            |
 
 ### 🎲 Games & Toys
 
-| Emoji | Name             | Made From                            |
-|-------|------------------|--------------------------------------|
-| 🪀    | Yo-Yo            | 🪵 Wood + 🧵 String                 |
-| 🎲    | Dice             | 🪵 Wood / 🪨 Stone                  |
-| ♟️    | Chess Piece      | 🪵 Wood / 🪨 Stone                  |
-| 🎯    | Dart Board       | 🪵 Wood + Paint                     |
-| 🧩    | Puzzle           | 🪵 Wood / 📜 Cardboard              |
-| 🪁    | Kite             | 🧵 Cloth + 🪵 Wood + 🧵 String     |
-| 🪤    | Mouse Trap       | 🪵 Wood + 🪨 Metal spring           |
+| Emoji | Name             | Made From                            | Base Price 🪙 |
+|-------|------------------|--------------------------------------|---------------|
+| 🪀    | Yo-Yo            | 🪵 Wood + 🧵 String                 | 5             |
+| 🎲    | Dice             | 🪵 Wood / 🪨 Stone                  | 4             |
+| ♟️    | Chess Piece      | 🪵 Wood / 🪨 Stone                  | 8             |
+| 🎯    | Dart Board       | 🪵 Wood + Paint                     | 10            |
+| 🧩    | Puzzle           | 🪵 Wood / 📜 Cardboard              | 6             |
+| 🪁    | Kite             | 🧵 Cloth + 🪵 Wood + 🧵 String     | 8             |
+| 🪤    | Mouse Trap       | 🪵 Wood + 🪨 Metal spring           | 5             |
 
 ---
 
@@ -499,22 +504,22 @@ Structures where production, trade, storage, and governance happen. Built using 
 
 Items used by professions to produce goods. Tools have durability and can break over time.
 
-| Emoji | Tool              | Used By                  | Made From                    |
-|-------|-------------------|--------------------------|------------------------------|
-| ⚒️    | Hammer & Pick     | ⛏️ Miner, 👷 Builder     | 🪨 Metal + 🪵 Wood          |
-| 🔨    | Hammer            | 👷 Builder               | 🪨 Metal + 🪵 Wood          |
-| ⛏️    | Pickaxe           | ⛏️ Miner                 | 🪨 Metal + 🪵 Wood          |
-| 🪓    | Axe               | 🪚 Lumberjack            | 🪨 Metal + 🪵 Wood          |
-| 🔧    | Wrench            | 🧑‍🔧 Mechanic            | 🪨 Metal                    |
-| 🔩    | Nut & Bolt        | 🧑‍🔧 Mechanic, 👷 Builder | 🪨 Metal                    |
-| ⚙️    | Gear              | 🧑‍💻 Engineer             | 🪨 Metal                    |
-| 🪚    | Saw               | 🪚 Lumberjack, 👷 Builder| 🪨 Metal + 🪵 Wood          |
-| 🪝    | Hook              | 🎣 Fisher                | 🪨 Metal                    |
-| 🪜    | Ladder            | 👷 Builder               | 🪵 Wood                     |
-| 🪛    | Screwdriver       | 🧑‍🔧 Mechanic            | 🪨 Metal + 🪵 Wood          |
-| 🎣    | Fishing Rod       | 🎣 Fisher                | 🪵 Wood + 🧵 String         |
-| 🏹    | Bow & Arrow       | 🧝 Ranger                | 🪵 Wood + 🧵 String + 🪶    |
-| ⚖️    | Scale / Balance   | 👨‍💼 Merchant             | 🪨 Metal                    |
+| Emoji | Tool              | Used By                  | Made From                    | Base Price 🪙 |
+|-------|-------------------|--------------------------|------------------------------|---------------|
+| ⚒️    | Hammer & Pick     | ⛏️ Miner, 👷 Builder     | 🪨 Metal + 🪵 Wood          | 12            |
+| 🔨    | Hammer            | 👷 Builder               | 🪨 Metal + 🪵 Wood          | 10            |
+| ⛏️    | Pickaxe           | ⛏️ Miner                 | 🪨 Metal + 🪵 Wood          | 12            |
+| 🪓    | Axe               | 🪚 Lumberjack            | 🪨 Metal + 🪵 Wood          | 10            |
+| 🔧    | Wrench            | 🧑‍🔧 Mechanic            | 🪨 Metal                    | 8             |
+| 🔩    | Nut & Bolt        | 🧑‍🔧 Mechanic, 👷 Builder | 🪨 Metal                    | 3             |
+| ⚙️    | Gear              | 🧑‍💻 Engineer             | 🪨 Metal                    | 6             |
+| 🪚    | Saw               | 🪚 Lumberjack, 👷 Builder| 🪨 Metal + 🪵 Wood          | 10            |
+| 🪝    | Hook              | 🎣 Fisher                | 🪨 Metal                    | 4             |
+| 🪜    | Ladder            | 👷 Builder               | 🪵 Wood                     | 8             |
+| 🪛    | Screwdriver       | 🧑‍🔧 Mechanic            | 🪨 Metal + 🪵 Wood          | 8             |
+| 🎣    | Fishing Rod       | 🎣 Fisher                | 🪵 Wood + 🧵 String         | 8             |
+| 🏹    | Bow & Arrow       | 🧝 Ranger                | 🪵 Wood + 🧵 String + 🪶    | 15            |
+| ⚖️    | Scale / Balance   | 👨‍💼 Merchant             | 🪨 Metal                    | 12            |
 
 ---
 
@@ -655,16 +660,16 @@ Energy sources that fuel production buildings and enable advanced manufacturing.
 
 Weapons, armor, and military symbols. Used for province defense and conquest.
 
-| Emoji | Name             | Type         | Made From                      |
-|-------|------------------|--------------|--------------------------------|
-| ⚔️    | Crossed Swords   | Melee weapon | 🪨 Metal + 🪵 Wood hilt       |
-| 🗡️    | Dagger           | Melee weapon | 🪨 Metal                      |
-| 🏹    | Bow & Arrow      | Ranged weapon| 🪵 Wood + 🧵 String + 🪶     |
-| 🔫    | Pistol           | Ranged weapon| 🪨 Metal + 🪵 Wood            |
-| 💣    | Bomb             | Explosive    | 🪨 Metal + ⚫ Gunpowder       |
-| 🛡️    | Shield           | Armor        | 🪵 Wood + 🪨 Metal            |
-| 🪖    | Military Helmet  | Armor        | 🪨 Metal + Leather             |
-| 🎖️    | Military Medal   | Decoration   | 🟡 Gold + Ribbon               |
+| Emoji | Name             | Type         | Made From                      | Base Price 🪙 |
+|-------|------------------|--------------|--------------------------------|---------------|
+| ⚔️    | Crossed Swords   | Melee weapon | 🪨 Metal + 🪵 Wood hilt       | 25            |
+| 🗡️    | Dagger           | Melee weapon | 🪨 Metal                      | 15            |
+| 🏹    | Bow & Arrow      | Ranged weapon| 🪵 Wood + 🧵 String + 🪶     | 15            |
+| 🔫    | Pistol           | Ranged weapon| 🪨 Metal + 🪵 Wood            | 30            |
+| 💣    | Bomb             | Explosive    | 🪨 Metal + ⚫ Gunpowder       | 35            |
+| 🛡️    | Shield           | Armor        | 🪵 Wood + 🪨 Metal            | 20            |
+| 🪖    | Military Helmet  | Armor        | 🪨 Metal + Leather             | 30            |
+| 🎖️    | Military Medal   | Decoration   | 🟡 Gold + Ribbon               | 40            |
 
 ---
 
