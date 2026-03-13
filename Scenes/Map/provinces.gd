@@ -1,5 +1,5 @@
 extends Node2D
-@onready var ProvinceScene = preload("res://Scenes/Map/province.tscn")
+@onready var ProvinceScene = preload(Constants.SCENE_PATHS.province)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -7,8 +7,8 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _process(delta: float) -> void:
+#	pass
 
 ## Generates all the provinces
 func generate_provinces(width: int, height: int) -> void:
