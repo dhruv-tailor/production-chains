@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dup7b0ola83fb"]
 
-[ext_resource type="Texture2D" uid="uid://bs7jbqvm6s4of" path="res://gfx/tile.png" id="1_4egvb"]
-[ext_resource type="Script" uid="uid://1imjl0tcq72w" path="res://Scenes/Map/province.gd" id="2_ehoj3"]
+[ext_resource type="Texture2D" uid="uid://bs7jbqvm6s4of" path="res://assets/textures/tile.png" id="1_4egvb"]
+[ext_resource type="Script" uid="uid://1imjl0tcq72w" path="res://map/province.gd" id="2_ehoj3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btw6b"]
 size = Vector2(100, 100)
