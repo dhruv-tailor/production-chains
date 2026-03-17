@@ -12,7 +12,8 @@ func generate_provinces(width: int, height: int) -> void:
 		province_grid[j].resize(width)
 		for i in range(width):
 			var province = ProvinceScene.instantiate()
-			province.position = Vector2(i * 100, j * 100)
+			var y_offset: int = 50 if i % 2 == 1 else 0
+			province.position = Vector2(i * 75, j * 100 + y_offset)
 			province.name = "Province_%d_%d" % [i, j]
 			province.id = ids
 			ids += 1
@@ -50,12 +51,25 @@ func _assign_resources(width: int, height: int) -> void:
 
 			while queue.size() > 0:
 				var current: Vector2i = queue.pop_front()
-				var neighbors: Array[Vector2i] = [
-					Vector2i(current.x - 1, current.y),
-					Vector2i(current.x + 1, current.y),
-					Vector2i(current.x, current.y - 1),
-					Vector2i(current.x, current.y + 1),
-				]
+				var neighbors: Array[Vector2i]
+				if current.x % 2 == 0:
+					neighbors = [
+						Vector2i(current.x, current.y - 1),
+						Vector2i(current.x + 1, current.y - 1),
+						Vector2i(current.x + 1, current.y),
+						Vector2i(current.x, current.y + 1),
+						Vector2i(current.x - 1, current.y),
+						Vector2i(current.x - 1, current.y - 1),
+					]
+				else:
+					neighbors = [
+						Vector2i(current.x, current.y - 1),
+						Vector2i(current.x + 1, current.y),
+						Vector2i(current.x + 1, current.y + 1),
+						Vector2i(current.x, current.y + 1),
+						Vector2i(current.x - 1, current.y + 1),
+						Vector2i(current.x - 1, current.y),
+					]
 				for neighbor in neighbors:
 					if neighbor.x < 0 or neighbor.x >= width or neighbor.y < 0 or neighbor.y >= height:
 						continue

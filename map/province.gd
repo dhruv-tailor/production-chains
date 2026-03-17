@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Polygon2D
 @export var id: int = 0
 var local_resources: Array[IngameResource] = []
 
