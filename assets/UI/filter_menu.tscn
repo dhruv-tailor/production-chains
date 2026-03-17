@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c171lltpippur"]
+
+[ext_resource type="Script" uid="uid://dev71sedg3o06" path="res://assets/UI/filter_menu.gd" id="1_s7ttq"]
+
+[node name="Filter Menu" type="Panel" unique_id=560218955]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_s7ttq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1112636827]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer" unique_id=1397269868]
+layout_mode = 2
+
+[node name="Icon" type="Label" parent="HBoxContainer" unique_id=110004011]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=1893487366]
+layout_mode = 2
+
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]

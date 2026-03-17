@@ -3,6 +3,18 @@ extends Node2D
 
 var province_grid: Array = [] # 2D array [y][x] of province nodes
 
+func _ready() -> void:
+	%ResourcesUI.filter_resources.connect(filter_resources)
+	
+func filter_resources(filters: Array[String]):
+	print(filters)
+	for row in province_grid:
+		for province: Province in row:
+			if province.local_resources.any(func(e: IngameResource): return filters.has(e.resource_name)):
+				province.color = Color.GREEN
+			else:
+				province.color = Color.WHITE
+
 ## Generates all the provinces and assigns resources
 func generate_provinces(width: int, height: int) -> void:
 	var ids: int = 0

@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bkbg7mj050lgg"]
 
+[ext_resource type="Script" uid="uid://citl1ltt8l1mi" path="res://assets/UI/resources_ui.gd" id="1_hu8lf"]
 [ext_resource type="PackedScene" uid="uid://byqkp402grscl" path="res://assets/UI/resource_finder_button.tscn" id="1_mse2t"]
+[ext_resource type="Script" uid="uid://cuwt5ls2ntakk" path="res://assets/UI/filter_panel.gd" id="3_51xpn"]
 
 [node name="ResourcesUI" type="CanvasLayer" unique_id=1462841004]
+script = ExtResource("1_hu8lf")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1085697500]
 anchors_preset = 12
@@ -16,34 +19,101 @@ grow_vertical = 0
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1730096930]
 layout_mode = 2
 
-[node name="Flora" parent="CenterContainer/HBoxContainer" unique_id=94934185 instance=ExtResource("1_mse2t")]
+[node name="Deselect" parent="CenterContainer/HBoxContainer" unique_id=94934185 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "⛔"
+
+[node name="Flora" parent="CenterContainer/HBoxContainer" unique_id=1922520136 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "🌿"
+resourceType = 1
+subresourceType = 1
 
 [node name="Fauna" parent="CenterContainer/HBoxContainer" unique_id=1364995047 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "🐄"
+resourceType = 1
+subresourceType = 2
 
 [node name="Minerals" parent="CenterContainer/HBoxContainer" unique_id=178920285 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "💎"
+resourceType = 1
+subresourceType = 3
 
 [node name="Intermediete" parent="CenterContainer/HBoxContainer" unique_id=1864397775 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "🪵"
+resourceType = 2
 
 [node name="Food and Drink" parent="CenterContainer/HBoxContainer" unique_id=1754350980 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "🍞"
+resourceType = 3
 
 [node name="Clothing and Textiles" parent="CenterContainer/HBoxContainer" unique_id=969063542 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "👗"
+resourceType = 4
 
 [node name="Crafted" parent="CenterContainer/HBoxContainer" unique_id=295112108 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "🏺"
+resourceType = 5
 
 [node name="Tools" parent="CenterContainer/HBoxContainer" unique_id=95006604 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "🔨"
+resourceType = 6
+
+[node name="Military" parent="CenterContainer/HBoxContainer" unique_id=1197085672 instance=ExtResource("1_mse2t")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "⚔️"
+resourceType = 7
+
+[node name="Filter Panel" type="Panel" parent="." unique_id=495140352]
+visible = false
+offset_left = 921.0
+offset_right = 1152.0
+offset_bottom = 647.0
+script = ExtResource("3_51xpn")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Filter Panel" unique_id=688244112]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 37.0
+offset_right = 224.0
+offset_bottom = 638.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Filter Panel/ScrollContainer" unique_id=1606530845]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Filter Panel" unique_id=1302561422]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 3.0
+offset_right = 227.0
+offset_bottom = 34.0
+text = "X"
+
+[connection signal="update_resource_filters" from="Filter Panel" to="." method="_on_filter_panel_update_resource_filters"]
+[connection signal="pressed" from="Filter Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Filter Panel/Button" to="Filter Panel" method="_on_button_pressed"]

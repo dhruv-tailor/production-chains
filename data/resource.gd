@@ -1,4 +1,4 @@
-class_name IngameResource extends Node
+class_name IngameResource
 
 @export var resource_name: String
 @export var icon: String

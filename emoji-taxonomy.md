@@ -53,7 +53,6 @@ Plants, crops, and trees that can be harvested directly from the land without pr
 | 🌰    | Chestnut         | Foraged nut                       | 15%        | 20           | 3             |
 | 🥜    | Peanuts          | Legume crop                       | 30%        | Global       | 2             |
 | 🫒    | Olive            | Base for oil                      | 15%        | 15           | 5             |
-| 🌱    | Seedling         | Generic crop growth               | 90%        | Global       | 1             |
 | 🍄    | Mushroom         | Foraged fungus                    | 35%        | 40           | 3             |
 | 🌻    | Sunflower        | Oil seed crop                     | 30%        | 35           | 3             |
 | 🌹    | Rose             | Flower crop, used in perfume      | 10%        | 10           | 8             |
@@ -84,9 +83,7 @@ Plants, crops, and trees that can be harvested directly from the land without pr
 | 🌴    | Palm Tree        | Source of palm oil, coconut       | 25%        | 30           | 5             |
 | 🌵    | Cactus           | Desert flora                      | 30%        | 25           | 4             |
 | 🍀    | Clover           | Forage/pasture plant              | 60%        | Global       | 1             |
-| 🪴    | Potted Plant     | Cultivated plant                  | 10%        | Global       | 5             |
 | 🎋    | Bamboo           | Fast-growing building material    | 25%        | 25           | 4             |
-| 🍃    | Leaves           | Generic foliage / tea leaves      | 90%        | Global       | 1             |
 | 🌿    | Herb             | Generic herb for cooking/medicine | 55%        | Global       | 2             |
 
 ---
@@ -143,7 +140,6 @@ Living animals that produce resources (milk, eggs, wool) or are themselves a res
 | 🫏    | Donkey           | Draft power, transport                | 25%        | Global       | 8             |
 | 🦩    | Flamingo         | Decorative feathers                   | 3%         | 5            | 22            |
 | 🐪    | Camel            | Milk, transport (desert)              | 12%        | 15           | 15            |
-| 🐫    | Two-Hump Camel   | Wool, transport (desert)              | 10%        | 12           | 16            |
 | 🦙    | Llama            | Wool, transport (mountain)            | 10%        | 12           | 12            |
 | 🦫    | Beaver           | Fur, dam-building                     | 12%        | 15           | 8             |
 | 🦦    | Otter            | Fur                                   | 5%         | 10           | 12            |
@@ -160,8 +156,6 @@ Non-living natural resources extracted from the earth or environment.
 |-------|------------------|---------------------------------------|------------|--------------|---------------|
 | 💎    | Gem / Diamond    | Precious gemstone                     | 2%         | 5            | 100           |
 | 🪨    | Rock / Stone     | Base building & crafting material     | 95%        | Global       | 1             |
-| 🧊    | Ice              | Cold-climate resource, water source   | 50%        | 100          | 2             |
-| 💧    | Water            | Essential resource for all production | 90%        | Global       | 1             |
 | 🛢️    | Oil Barrel       | Petroleum / crude oil                 | 8%         | 10           | 15            |
 | 🧂    | Salt             | Mineral for food preservation         | 30%        | 40           | 4             |
 | 🪸    | Coral            | Marine mineral resource               | 10%        | 15           | 8             |

@@ -17,3 +17,4 @@ position = Vector2(50, 50)
 script = ExtResource("2_jolfa")
 
 [node name="ResourcesUI" parent="." unique_id=2124985297 instance=ExtResource("4_lgq1i")]
+unique_name_in_owner = true
