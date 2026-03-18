@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cagdsf1mx04u7"]
+
+[ext_resource type="Script" uid="uid://1cgrqvqlbflu" path="res://map/hex_cell.gd" id="1_1yid8"]
+
+[node name="HexCell" type="MeshInstance3D" unique_id=846295128]
+script = ExtResource("1_1yid8")

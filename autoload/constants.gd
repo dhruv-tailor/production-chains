@@ -3,6 +3,8 @@ extends Node
 const SCENE_PATHS: Dictionary = {
 	"province": "uid://dup7b0ola83fb",
 	"filter_menu": "uid://c171lltpippur",
+	"hex_cell": "uid://cagdsf1mx04u7",
+	"cell_label": "uid://cq7lki5xujwcf"
 }
 
 enum resourceType {

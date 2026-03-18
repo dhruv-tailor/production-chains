@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://b7bep7sb5x5c7"]
 
 [ext_resource type="Script" uid="uid://l8fenjbywwmr" path="res://map/map.gd" id="1_xtf6f"]
-[ext_resource type="Script" uid="uid://cv87jdd778514" path="res://map/provinces.gd" id="2_jolfa"]
-[ext_resource type="Script" uid="uid://co4wek13epj3v" path="res://map/camera_2d.gd" id="3_03x5g"]
+[ext_resource type="PackedScene" uid="uid://cabvy7uc5qw6e" path="res://map/HexGrid.tscn" id="3_4hjbm"]
+[ext_resource type="Script" uid="uid://oeqw6hi2i06m" path="res://map/camera_3d.gd" id="4_kffv2"]
 [ext_resource type="PackedScene" uid="uid://bkbg7mj050lgg" path="res://assets/UI/resources_ui.tscn" id="4_lgq1i"]
 
-[node name="Map" type="Node2D" unique_id=1349673669]
+[node name="Map" type="Node" unique_id=274577437]
 script = ExtResource("1_xtf6f")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1461884179]
-position = Vector2(575, 324)
-script = ExtResource("3_03x5g")
-
-[node name="Provinces" type="Node2D" parent="." unique_id=134718682]
-position = Vector2(50, 50)
-script = ExtResource("2_jolfa")
 
 [node name="ResourcesUI" parent="." unique_id=2124985297 instance=ExtResource("4_lgq1i")]
 unique_name_in_owner = true
+
+[node name="HexGrid" parent="." unique_id=1603990751 instance=ExtResource("3_4hjbm")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1329627021]
+transform = Transform3D(1, 0, 0, 0, 0.9070514, 0.42102, 0, -0.42102, 0.9070514, 0, 5.5264773, 7.971271)
+script = ExtResource("4_kffv2")

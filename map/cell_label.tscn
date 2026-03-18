@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cq7lki5xujwcf"]
+
+[node name="Cell Label" type="Label3D" unique_id=1445140741]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+pixel_size = 0.01
+no_depth_test = true
+font_size = 24
+width = 0.0

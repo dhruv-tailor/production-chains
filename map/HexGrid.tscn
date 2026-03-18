@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cabvy7uc5qw6e"]
+
+[ext_resource type="Script" uid="uid://l28ivvac2g6h" path="res://map/hex_grid.gd" id="1_a3spi"]
+[ext_resource type="Script" uid="uid://dof0yafstt7t4" path="res://map/hex_mesh.gd" id="2_jeywf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i43qq"]
+shading_mode = 0
+vertex_color_use_as_albedo = true
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jeywf"]
+
+[node name="HexGrid" type="Node3D" unique_id=1603990751]
+script = ExtResource("1_a3spi")
+
+[node name="HexMesh" type="MeshInstance3D" parent="." unique_id=225761192]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_i43qq")
+script = ExtResource("2_jeywf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HexMesh" unique_id=1906029670]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HexMesh/StaticBody3D" unique_id=1414423267]
+shape = SubResource("ConcavePolygonShape3D_jeywf")
+
+[node name="Cell Labels" type="Node3D" parent="." unique_id=1166323800]
+unique_name_in_owner = true

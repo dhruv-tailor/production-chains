@@ -1,0 +1,14 @@
+class_name HexMetrics
+
+const OUTER_RADIUS: float = 2
+const INNER_RADIUS: float = OUTER_RADIUS * 0.866025404
+
+const CORNERS: Array[Vector3] = [
+	Vector3(0,0,OUTER_RADIUS),
+	Vector3(INNER_RADIUS,0,0.5 * OUTER_RADIUS),
+	Vector3(INNER_RADIUS,0,-0.5 * OUTER_RADIUS),
+	Vector3(0,0,-OUTER_RADIUS),
+	Vector3(-INNER_RADIUS,0,-0.5 * OUTER_RADIUS),
+	Vector3(-INNER_RADIUS,0,0.5 * OUTER_RADIUS),
+	Vector3(0,0,OUTER_RADIUS),
+]
