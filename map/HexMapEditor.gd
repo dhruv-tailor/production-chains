@@ -26,3 +26,12 @@ func select_color(index: int):
 
 func _on_option_button_item_selected(index: int) -> void:
 	select_color(index)
+
+
+func _on_check_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		get_viewport().debug_draw = Viewport.DEBUG_DRAW_WIREFRAME
+	else:
+		get_viewport().debug_draw = Viewport.DEBUG_DRAW_DISABLED
+		
+		

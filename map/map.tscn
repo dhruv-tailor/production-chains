@@ -52,4 +52,9 @@ popup/item_2/id = 2
 popup/item_3/text = "White"
 popup/item_3/id = 3
 
+[node name="CheckButton" type="CheckButton" parent="Hex Map Editor/PanelContainer/VBoxContainer" unique_id=1975860762]
+layout_mode = 2
+text = "WireFrame Mode"
+
 [connection signal="item_selected" from="Hex Map Editor/PanelContainer/VBoxContainer/OptionButton" to="Map Editor" method="_on_option_button_item_selected"]
+[connection signal="toggled" from="Hex Map Editor/PanelContainer/VBoxContainer/CheckButton" to="Map Editor" method="_on_check_button_toggled"]

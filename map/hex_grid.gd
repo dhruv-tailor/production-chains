@@ -30,6 +30,17 @@ func CreateCell(x: int,z: int):
 	cell.position = cell_position
 	cell.coordinates = HexCoordinates.from_offset_coordinates(x,z)
 	cell.color = default_color
+	if (x > 0):
+		cell.setNeighbor(HexDirection.HexDirection.W, cells[cells.size() - 1])
+	if (z > 0):
+		if (z & 1) == 0:
+			cell.setNeighbor(HexDirection.HexDirection.SE, cells[cells.size() - width])
+			if x > 0:
+				cell.setNeighbor((HexDirection.HexDirection.SW), cells[cells.size() - width - 1])
+		else:
+			cell.setNeighbor(HexDirection.HexDirection.SW,cells[cells.size() - width])
+			if (x < width - 1):
+				cell.setNeighbor(HexDirection.HexDirection.SE, cells[cells.size() - width + 1])
 	cells.append(cell)
 
 	var label = cell_label.instantiate() as Label3D
