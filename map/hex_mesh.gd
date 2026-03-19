@@ -31,7 +31,7 @@ func Triangulate(cells: Array):
 	st.commit(mesh)
 	$StaticBody3D/CollisionShape3D.shape = mesh.create_trimesh_shape()
 
-func TriangulateCell(cell: MeshInstance3D):
+func TriangulateCell(cell: hex_cell):
 	var center: Vector3 = cell.position
 	for i in range(6):
 		AddTriangle(

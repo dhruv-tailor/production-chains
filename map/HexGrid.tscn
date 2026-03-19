@@ -11,6 +11,12 @@ vertex_color_use_as_albedo = true
 
 [node name="HexGrid" type="Node3D" unique_id=1603990751]
 script = ExtResource("1_a3spi")
+width = null
+height = null
+hexCell = null
+cell_label = null
+default_color = null
+touched_color = null
 
 [node name="HexMesh" type="MeshInstance3D" parent="." unique_id=225761192]
 unique_name_in_owner = true

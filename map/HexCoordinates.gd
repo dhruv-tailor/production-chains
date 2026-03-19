@@ -10,8 +10,8 @@ func _init(x: int = 0, z: int = 0) -> void:
 	self.x = x
 	self.z = z
 
-static func from_offset_coordinates(x: int, z: int) -> HexCoordinates:
-	return HexCoordinates.new(x - z / 2,z)
+static func from_offset_coordinates(x_coord: int, z_coord: int) -> HexCoordinates:
+	return HexCoordinates.new(x_coord - z_coord / 2,z_coord)
 	
 func _to_string() -> String:
 	return "(" + str(x) + ", " + str(y) + ", " + str(z) + ")"

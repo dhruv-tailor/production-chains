@@ -41,7 +41,7 @@ layout_mode = 2
 
 [node name="OptionButton" type="OptionButton" parent="Hex Map Editor/PanelContainer/VBoxContainer" unique_id=461907295]
 layout_mode = 2
-selected = 3
+selected = 0
 item_count = 4
 popup/item_0/text = "Yellow"
 popup/item_0/id = 0

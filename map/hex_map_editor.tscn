@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dj3sfl1murp2v"]
+
+[node name="Hex Map Editor" type="CanvasLayer" unique_id=856990578]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=26720659]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1257650139]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer" unique_id=622566517]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "Yellow"
+popup/item_0/id = 0
+popup/item_1/text = "Green"
+popup/item_1/id = 1
+popup/item_2/text = "Blue"
+popup/item_2/id = 2
+popup/item_3/text = "White"
+popup/item_3/id = 3
