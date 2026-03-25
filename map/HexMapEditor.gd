@@ -3,6 +3,7 @@ extends Node
 @export var colors: PackedColorArray
 @export var hex_grid: Node3D
 var active_color: Color = Color.WHITE
+var active_elevation: int = 0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -18,7 +19,8 @@ func handle_input() -> void:
 	var result = space_state.intersect_ray(query)
 	
 	if result:
-		hex_grid.color_cell(result.position,active_color)
+		var cell = hex_grid.GetCell(result.position)
+		EditCell(cell)
 	
 func select_color(index: int):
 	active_color = colors[index]
@@ -34,4 +36,11 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 	else:
 		get_viewport().debug_draw = Viewport.DEBUG_DRAW_DISABLED
 		
-		
+func EditCell(cell: hex_cell):
+	cell.color = active_color
+	cell.Elevation = active_elevation
+	hex_grid.Refresh()
+
+
+func _on_elevation_slider_value_changed(value: float) -> void:
+	active_elevation = int(value)

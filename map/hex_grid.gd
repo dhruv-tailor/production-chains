@@ -43,17 +43,17 @@ func CreateCell(x: int,z: int):
 				cell.setNeighbor(HexDirection.HexDirection.SE, cells[cells.size() - width + 1])
 	cells.append(cell)
 
-	var label = cell_label.instantiate() as Label3D
-	label.position = cell_position + Vector3(0, 0.01, 0) # Prevents z fighting
-	label.text = cell.coordinates.to_string_on_separate_lines()
-	grid_labels.add_child(label)
+	# var label = cell_label.instantiate() as Label3D
+	# label.position = cell_position + Vector3(0, 0.01, 0) # Prevents z fighting
+	# label.text = cell.coordinates.to_string_on_separate_lines()
+	# grid_labels.add_child(label)
 
 
-func color_cell(p: Vector3, col: Color) -> void:
+func GetCell(p: Vector3) -> hex_cell:
 	var local_pos = to_local(p)
 	var coordinates = HexCoordinates.from_position(local_pos)
 	var index = coordinates.x + coordinates.z * width + coordinates.z / 2
-	var cell = cells[index]
-	cell.color = col
-	hex_mesh.Triangulate(cells)
+	return cells[index]
 	
+func Refresh():
+	hex_mesh.Triangulate(cells)

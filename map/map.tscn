@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://oeqw6hi2i06m" path="res://map/camera_3d.gd" id="4_kffv2"]
 [ext_resource type="PackedScene" uid="uid://bkbg7mj050lgg" path="res://assets/UI/resources_ui.tscn" id="4_lgq1i"]
 [ext_resource type="Script" uid="uid://du8cui0c8bqhw" path="res://map/HexMapEditor.gd" id="5_kffv2"]
-[ext_resource type="PackedScene" uid="uid://cq7lki5xujwcf" path="res://map/cell_label.tscn" id="5_kxmgb"]
 
 [node name="Map" type="Node" unique_id=274577437]
 script = ExtResource("1_xtf6f")
@@ -15,11 +14,6 @@ unique_name_in_owner = true
 visible = false
 
 [node name="HexGrid" parent="." unique_id=1603990751 instance=ExtResource("3_4hjbm")]
-width = 6
-height = 6
-cell_label = ExtResource("5_kxmgb")
-default_color = Color(1, 1, 1, 1)
-touched_color = Color(1, 0, 1, 1)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1329627021]
 transform = Transform3D(1, 0, 0, 0, 0.9070514, 0.42102, 0, -0.42102, 0.9070514, 0, 5.5264773, 7.971271)
@@ -56,5 +50,16 @@ popup/item_3/id = 3
 layout_mode = 2
 text = "WireFrame Mode"
 
+[node name="ElevationLabel" type="Label" parent="Hex Map Editor/PanelContainer/VBoxContainer" unique_id=659446600]
+layout_mode = 2
+
+[node name="ElevationSlider" type="HSlider" parent="Hex Map Editor/PanelContainer/VBoxContainer" unique_id=1733051937]
+layout_mode = 2
+max_value = 6.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1950798503]
+transform = Transform3D(1, 0, 0, 0, 0.4480556, 0.8940058, 0, -0.8940058, 0.4480556, 0, 8.962393, 0)
+
 [connection signal="item_selected" from="Hex Map Editor/PanelContainer/VBoxContainer/OptionButton" to="Map Editor" method="_on_option_button_item_selected"]
 [connection signal="toggled" from="Hex Map Editor/PanelContainer/VBoxContainer/CheckButton" to="Map Editor" method="_on_check_button_toggled"]
+[connection signal="value_changed" from="Hex Map Editor/PanelContainer/VBoxContainer/ElevationSlider" to="Map Editor" method="_on_elevation_slider_value_changed"]
